@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+</head>
+<body>
+  <div
+  id="my-slider-2"
+  class="swiper slider"
+  data-settings='{"columns":4, "autoplay": "true", "infinite": true, "centerMode": false, "space": 20, "columns_mobile": 1, "columns_mobile_tablet": 2, "columns_tablet": 2}'
+>
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <a class="main-border-hover-btn">
+        <div class="main-content flex-column">
+          <div class="img-wrapper">
+            <img src="./assets/img/header-image.png" alt="" />
+          </div>
+          <div
+            class="text-wrapper flex align-items-center flex-column justify-content-center"
+          >
+            <p class="title">میکامال کیش</p>
+            <p class="content">اجرا شده در 1404</p>
+          </div>
+        </div>
+        <svg preserveAspectRatio="none">
+          <path class="border-path" />
+        </svg>
+      </a>
+    </div>
+    <div class="swiper-slide">
+      <a class="main-border-hover-btn">
+        <div class="main-content flex-column">
+          <div class="img-wrapper">
+            <img src="./assets/img/dev_team.jpg" alt="" />
+          </div>
+          <div
+            class="text-wrapper flex align-items-center flex-column justify-content-center"
+          >
+            <p class="title">میکامال کیش</p>
+            <p class="content">اجرا شده در 1404</p>
+          </div>
+        </div>
+        <svg preserveAspectRatio="none">
+          <path class="border-path" />
+        </svg>
+      </a>
+    </div>
+    <div class="swiper-slide">
+      <a class="main-border-hover-btn">
+        <div class="main-content flex-column">
+          <div class="img-wrapper">
+            <img src="./assets/img/header-image.png" alt="" />
+          </div>
+          <div
+            class="text-wrapper flex align-items-center flex-column justify-content-center"
+          >
+            <p class="title">میکامال کیش</p>
+            <p class="content">اجرا شده در 1404</p>
+          </div>
+        </div>
+        <svg preserveAspectRatio="none">
+          <path class="border-path" />
+        </svg>
+      </a>
+    </div>
+    <div class="swiper-slide">
+      <a class="main-border-hover-btn">
+        <div class="main-content flex-column">
+          <div class="img-wrapper">
+            <img src="./assets/img/header-image.png" alt="" />
+          </div>
+          <div
+            class="text-wrapper flex align-items-center flex-column justify-content-center"
+          >
+            <p class="title">میکامال کیش</p>
+            <p class="content">اجرا شده در 1404</p>
+          </div>
+        </div>
+        <svg preserveAspectRatio="none">
+          <path class="border-path" />
+        </svg>
+      </a>
+    </div>
+    <div class="swiper-slide">
+      <a class="main-border-hover-btn">
+        <div class="main-content flex-column">
+          <div class="img-wrapper">
+            <img src="./assets/img/header-image.png" alt="" />
+          </div>
+          <div
+            class="text-wrapper flex align-items-center flex-column justify-content-center"
+          >
+            <p class="title">میکامال کیش</p>
+            <p class="content">اجرا شده در 1404</p>
+          </div>
+        </div>
+        <svg preserveAspectRatio="none">
+          <path class="border-path" />
+        </svg>
+      </a>
+    </div>
+    <div class="swiper-slide">
+      <a class="main-border-hover-btn">
+        <div class="main-content flex-column">
+          <div class="img-wrapper">
+            <img src="./assets/img/header-image.png" alt="" />
+          </div>
+          <div
+            class="text-wrapper flex align-items-center flex-column justify-content-center"
+          >
+            <p class="title">میکامال کیش</p>
+            <p class="content">اجرا شده در 1404</p>
+          </div>
+        </div>
+        <svg preserveAspectRatio="none">
+          <path class="border-path" />
+        </svg>
+      </a>
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Include Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- Your provided script, modified to remove pagination -->
+<script>
+  $(".slider").each(function () {
+    var setting = $(this).attr("data-settings");
+    var id = $(this).attr("id");
+    var items = JSON.parse(setting);
+
+    var autoplaySetting =
+      items.autoplay === "false"
+        ? false
+        : {
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          };
+
+    new Swiper("#" + id, {
+      slidesPerView: items.columns,
+      spaceBetween: items.space || 0,
+      autoplay: autoplaySetting,
+      loop: items.infinite,
+      centeredSlides: items.centerMode,
+      navigation: {
+        nextEl: "#" + id + " .swiper-button-next",
+        prevEl: "#" + id + " .swiper-button-prev",
+      },
+      pagination: {
+        el: "#" + id + " .swiper-pagination",
+        clickable: true,
+        dynamicBullets: false, // bullet‌ها با اندازه یکسان
+      },
+      breakpoints: {
+        10: { slidesPerView: items.columns_mobile },
+        480: { slidesPerView: items.columns_mobile_tablet },
+        768: { slidesPerView: items.columns_tablet },
+        1024: { slidesPerView: items.columns },
+      },
+    });
+  });
+</script>
+</body>
+</html>
