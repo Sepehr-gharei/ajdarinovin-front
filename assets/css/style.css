@@ -583,7 +583,7 @@ header .nav-section nav .menu-item-has-children::after {
 header .nav-section nav ul .menu-item-has-children:hover::after {
   transform: rotateZ(180deg);
   top: 30%;
-  fill: var(--norma-orange-color);
+  color: var(--norma-orange-color);
 }
 
 header .nav-section nav ul li a:hover { color: var(--norma-orange-color); }
