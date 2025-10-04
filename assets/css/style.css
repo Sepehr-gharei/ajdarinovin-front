@@ -952,7 +952,7 @@ header .header-main-content .back-title {
   top: -48px;
   z-index: -1;
   color: var(--secondery-light-purple-color);
-  font-size: 175px;
+  font-size: 145px;
   transform: translateX(-50%);
 }
 
