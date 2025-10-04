@@ -144,7 +144,7 @@ h4,
 h5,
 h6 {
   line-height: 1.4;
-  font-weight: bold;
+  font-family: peyda-bold;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
@@ -210,7 +210,7 @@ small {
 
 strong,
 big {
-  font-weight: bold;
+  font-family: peyda-bold;
 }
 em {
   font-style: italic;
@@ -320,7 +320,7 @@ td {
 table tr:first-child td {
   background-color: #ff5757;
   color: white;
-  font-weight: bold;
+  font-family: peyda-bold;
   border: none;
 }
 
@@ -433,7 +433,7 @@ dt {
   clear: left;
   width: 150px;
   text-align: right;
-  font-weight: bold;
+  font-family: peyda-bold;
 }
 dt:after {
   content: ":";
@@ -708,7 +708,9 @@ header .nav-section.sticky-header {
   top: 0;
   color: var(--dark-purple-color);
   z-index: 10000;
-  height: 100px;
+  height: 85px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 header .nav-section.sticky-header a {
@@ -835,13 +837,13 @@ header .nav-section nav ul .sub-menu li {
   background-color: var(--light-normal-purple-color);
   padding: 15px;
 }
-header .nav-section nav ul .sub-menu li a:hover{
+header .nav-section nav ul .sub-menu li a:hover {
   color: var(--normal-orange-color);
 }
 header .nav-section.sticky-header nav ul .sub-menu li {
   background-color: var(--normal-orange-color);
 }
-header .nav-section.sticky-header nav ul .sub-menu li a:hover{
+header .nav-section.sticky-header nav ul .sub-menu li a:hover {
   color: var(--light-purple-color);
 }
 
@@ -1233,7 +1235,7 @@ header .header-main-content .main-border-hover-btn {
 }
 .about-ajdari-home-page-section .main-text-wrapper .title {
   font-size: 20px;
-  font-weight: 600;
+  font-family: peyda-bold;
 }
 .about-ajdari-home-page-section .main-text-wrapper .content {
   margin-top: 10px;
@@ -1257,10 +1259,11 @@ header .header-main-content .main-border-hover-btn {
   position: absolute;
   left: 10px;
   content: "- - - - - - - - - -";
-  top: 10px;
+  top: 19px;
   font-size: 22px;
   transform: rotate(90deg);
   transform-origin: top left;
+  font-family: peyda-medium;
 }
 .about-ajdari-home-page-section
   .main-text-wrapper
@@ -1275,11 +1278,12 @@ header .header-main-content .main-border-hover-btn {
   .header {
   padding: 10px 0;
   font-size: 26px;
-  font-weight: 600;
+}
+.about-ajdari-home-page-section .main-text-wrapper .project-wrapper .item {
+  font-size: 16px;
+  font-family: peyda-bold;
 }
 .about-ajdari-home-page-section .main-text-wrapper .project-wrapper .item p {
-  font-size: 16px;
-  font-weight: 600;
   padding: 10px 0;
 }
 
@@ -1499,17 +1503,15 @@ header .header-main-content .main-border-hover-btn {
   margin-bottom: 5px;
   font-size: 18px;
 }
-.last-blogs-page-section
-  .main-content
-  .single-last-blog ,.last-blogs-page-section .three-last-blog .item  {
-    position: relative;
-  }
-  .last-blogs-page-section
-  .main-content
-  .single-last-blog  a.page-link-redirect ,.last-blogs-page-section .three-last-blog .item a.page-link-redirect{
-    position: absolute;
-    z-index: 100;
-  }
+.last-blogs-page-section .main-content .single-last-blog,
+.last-blogs-page-section .three-last-blog .item {
+  position: relative;
+}
+.last-blogs-page-section .main-content .single-last-blog a.page-link-redirect,
+.last-blogs-page-section .three-last-blog .item a.page-link-redirect {
+  position: absolute;
+  z-index: 100;
+}
 .last-blogs-page-section
   .main-content
   .single-last-blog
@@ -1825,6 +1827,7 @@ header .header-main-content .main-border-hover-btn {
   }
   header .nav-section .menu-container {
     padding-top: 50px;
+    z-index: 10;
     position: fixed;
     top: 0;
     color: var(--text-color);
@@ -2071,14 +2074,17 @@ header .header-main-content .main-border-hover-btn {
     font-size: 16px;
     top: 25px;
   }
-}
-
-@media (max-width: 400px) {
+  .about-ajdari-home-page-section .main-text-wrapper .project-wrapper {
+    padding: 6px 0px;
+  }
+  .about-ajdari-home-page-section .main-text-wrapper .project-wrapper .item {
+    padding: 4px 0;
+  }
   .about-ajdari-home-page-section
     .main-text-wrapper
     .project-wrapper
     .item::after {
     font-size: 14px;
-    top: 30px;
+    top: 19px;
   }
 }
