@@ -681,7 +681,7 @@ figcaption {
 header {
   background: var(--normal-purple-color) url("../img/header-bg.png") no-repeat
     center/cover;
-  height: 720px;
+  height: 650px;
   color: var(--text-white-color);
   display: flex;
   flex-direction: column;
@@ -1475,8 +1475,8 @@ header .header-main-content .main-border-hover-btn {
 }
 .last-blogs-page-section
   .main-content
-  .single-last-blog
-  .image-wrapper:hover
+  .single-last-blog:hover
+  .image-wrapper
   img {
   scale: 1.2;
 }
@@ -1786,15 +1786,17 @@ header .header-main-content .main-border-hover-btn {
   background-color: var(--normal-orange-color);
   content: "";
   border-radius: 50%;
-  right: -10px;
   top: 50%;
   transform: translateY(-50%);
   opacity: 0;
+  transition: all 0.3s ease;
+  right: -15px;
 }
 .main-footer .main-footer-wrapper .nav-wrapper .item li a:hover {
   color: var(--normal-orange-color);
 }
 .main-footer .main-footer-wrapper .nav-wrapper .item li a:hover::after {
+  right: -10px;
   opacity: 1;
 }
 @media (max-width: 1180px) {
@@ -1893,7 +1895,7 @@ header .header-main-content .main-border-hover-btn {
     height: 1000px;
   }
   header .header-main-content {
-    top: 50%;
+    top: 42%;
   }
   header .header-main-content .back-title {
     top: 250px;
@@ -2017,8 +2019,8 @@ header .header-main-content .main-border-hover-btn {
     width: 300px;
   }
   header .header-main-content .content .image-field .about-pic.item-two {
-    right: 15%;
-    bottom: 45px;
+    right: 25%;
+    bottom: 21px;
   }
   header .header-main-content .content .image-field .about-pic.item-one {
     right: 29%;
