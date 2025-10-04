@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+.btn-svg { 
+  position: relative; 
+  background: #fe9d3d; 
+  border: none; 
+  border-radius: 10px; 
+  cursor: pointer; 
+  padding: 0; 
+  color: #fff; 
+  font-size: 18px; 
+  overflow: visible; 
+} 
+ 
+.btn-svg span { 
+  position: absolute; 
+  inset: 0; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  z-index: 2; 
+  pointer-events: none; 
+} 
+ 
+/* SVG border */ 
+.btn-svg .border { 
+  position: relative; 
+  width: 180px; 
+  height: 60px; 
+  fill: none; 
+  stroke: #fff; 
+  stroke-width: 2; 
+  stroke-dasharray: 440; 
+  stroke-dashoffset: 440; 
+  transition: stroke-dashoffset 0.8s ease; 
+} 
+ 
+/* hover animation */ 
+.btn-svg:hover .border { 
+  stroke-dashoffset: 0; 
+  transition: stroke-dashoffset 0.8s ease; 
+}
+    </style>
+</head>
+<body>
+    <main> 
+        <button class="btn-svg"> 
+          <svg viewBox="0 0 180 60" class="border"> 
+            <rect x="5" y="5" width="170" height="50" rx="10" ry="10"></rect> 
+          </svg> 
+          <span>Hover Me</span> 
+        </button> 
+      </main> 
+      
+      
+</body>
+</html>

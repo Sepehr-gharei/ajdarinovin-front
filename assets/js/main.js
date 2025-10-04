@@ -82,3 +82,40 @@ document.addEventListener("DOMContentLoaded", function () {
     path.setAttribute("stroke-dashoffset", length);
   });
 });
+$(".slider").each(function () {
+  var setting = $(this).attr("data-settings");
+  var id = $(this).attr("id");
+  var items = JSON.parse(setting);
+
+  var autoplaySetting =
+    items.autoplay === "false"
+      ? false
+      : {
+          delay: 3000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        };
+
+  new Swiper("#" + id, {
+    slidesPerView: items.columns,
+    spaceBetween: items.space || 0,
+    autoplay: autoplaySetting,
+    loop: items.infinite,
+    centeredSlides: items.centerMode,
+    navigation: {
+      nextEl: "#" + id + " .swiper-button-next",
+      prevEl: "#" + id + " .swiper-button-prev",
+    },
+    pagination: {
+      el: "#" + id + " .swiper-pagination",
+      clickable: true,
+      dynamicBullets: false, // bullet‌ها با اندازه یکسان
+    },
+    breakpoints: {
+      10: { slidesPerView: items.columns_mobile },
+      480: { slidesPerView: items.columns_mobile_tablet },
+      768: { slidesPerView: items.columns_tablet },
+      1024: { slidesPerView: items.columns },
+    },
+  });
+});
