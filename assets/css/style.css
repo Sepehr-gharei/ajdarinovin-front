@@ -1649,7 +1649,7 @@ header .header-main-content .main-border-hover-btn {
   display: block;
 }
 .about-ajdarinovin-home-page-section .main .main-content {
-  max-height: 45px;
+  max-height: 42px;
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
 }
