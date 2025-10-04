@@ -13,6 +13,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Anton";
+  src: url("../fonts/Anton-Regular.ttf") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
 
 @font-face {
   font-family: "ajdarinovin";
@@ -941,12 +947,12 @@ header .header-main-content {
 
 header .header-main-content .back-title {
   position: absolute;
+  font-family: Anton;
   left: 50%;
   top: -48px;
-  font-weight: 600;
   z-index: -1;
   color: var(--secondery-light-purple-color);
-  font-size: 146px;
+  font-size: 175px;
   transform: translateX(-50%);
 }
 
@@ -1986,7 +1992,7 @@ header .header-main-content .main-border-hover-btn {
     width: 90%;
   }
   header .header-main-content .back-title {
-    top: 250px;
+    top: 220px;
     font-size: 160px;
     text-align: center;
   }
