@@ -1494,6 +1494,17 @@ header .header-main-content .main-border-hover-btn {
 }
 .last-blogs-page-section
   .main-content
+  .single-last-blog ,.last-blogs-page-section .three-last-blog .item  {
+    position: relative;
+  }
+  .last-blogs-page-section
+  .main-content
+  .single-last-blog  a.page-link-redirect ,.last-blogs-page-section .three-last-blog .item a.page-link-redirect{
+    position: absolute;
+    z-index: 100;
+  }
+.last-blogs-page-section
+  .main-content
   .single-last-blog
   .text-field
   .about-this-blog,
