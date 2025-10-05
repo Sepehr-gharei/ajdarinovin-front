@@ -1,63 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        
-.btn-svg { 
-  position: relative; 
-  background: #fe9d3d; 
-  border: none; 
-  border-radius: 10px; 
-  cursor: pointer; 
-  padding: 0; 
-  color: #fff; 
-  font-size: 18px; 
-  overflow: visible; 
-} 
- 
-.btn-svg span { 
-  position: absolute; 
-  inset: 0; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  z-index: 2; 
-  pointer-events: none; 
-} 
- 
-/* SVG border */ 
-.btn-svg .border { 
-  position: relative; 
-  width: 180px; 
-  height: 60px; 
-  fill: none; 
-  stroke: #fff; 
-  stroke-width: 2; 
-  stroke-dasharray: 440; 
-  stroke-dashoffset: 440; 
-  transition: stroke-dashoffset 0.8s ease; 
-} 
- 
-/* hover animation */ 
-.btn-svg:hover .border { 
-  stroke-dashoffset: 0; 
-  transition: stroke-dashoffset 0.8s ease; 
-}
+      .comments-area {
+        margin-top: 50px;
+        overflow: hidden;
+        height: auto;
+      }
+      .comment-form {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .comment-form textarea,
+      .comment-form input {
+        background-color: #f0f0f1;
+        width: 100%;
+        line-height: 1.5;
+        font-size: 0.9em;
+        padding: 0.9rem 0.8rem 0.8rem 4rem;
+        border-radius: 5px;
+        border: 1px solid rgba(167, 167, 167, 0.4);
+      }
+      .comment-form input {
+        border-radius: 10px;
+        margin-bottom: 8px;
+      }
+      .comment-form .input {
+        background-color: var(--secondery-background-color);
+      }
+      #comments .comment-reply-title {
+        border-bottom: 1px solid #bebebe;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .comment-form {
+        display: flex;
+        justify-content: space-between;
+      }
+      .comment-form .comment-form-comment {
+        width: 60%;
+        margin: 0;
+      }
+      .comment-form .form-submit {
+        width: 28%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0;
+        height: 100%;
+      }
+      .comment-form .comment-notes,
+      .comment-form .logged-in-as {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      .comment-form .comment-form-author,
+      .comment-form .comment-form-email {
+        width: 33.33%;
+      }
+      .comment-form .comment-form-email {
+        padding: 0 10px;
+      }
+      .comment-form .form-submit .submit {
+        padding: 0.9rem 0 0.8rem 0;
+        color: var(--text-white-color);
+        font-weight: bold;
+        background-color: var(--main-color-one);
+      }
+      .comment-form input:focus,
+      .comment-form textarea:focus {
+        border-color: #222;
+      }
+      .comment-list,
+      .comment-list ul {
+        list-style: none;
+      }
+      .comment-list {
+        padding: 20px;
+        margin: 20px 0;
+      }
+      .comment-list li a,
+      .logged-in-as a {
+        color: #414141;
+      }
+      .comment-list li {
+        margin-bottom: 20px;
+      }
+      .comment-author {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .comment-author .avatar {
+        border-radius: 5px;
+        margin: 0 0 0 10px !important;
+      }
+      .comment-author .says {
+        margin-right: 5px;
+      }
+      .comment-reply-link {
+        background-color: #f5f5f5;
+        display: inline-block;
+        margin-top: 12px;
+        padding: 2px 10px 3px 10px;
+        border-radius: 4px;
+        font-size: 12px;
+      }
+      .comment-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .commentlist .children li {
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+      }
+      .comment-body {
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid #e8e8e8;
+        background-color: white;
+      }
+      .comment-list li ul {
+        margin: 15px 15px 0 0;
+      }
+      .comment-list li ul.children .comment-reply-link {
+        background-color: black;
+        color: white;
+      }
+      .comment-list li ul.children .comment-body {
+        background-color: #e6ffea;
+      }
     </style>
-</head>
-<body>
-    <main> 
-        <button class="btn-svg"> 
-          <svg viewBox="0 0 180 60" class="border"> 
-            <rect x="5" y="5" width="170" height="50" rx="10" ry="10"></rect> 
-          </svg> 
-          <span>Hover Me</span> 
-        </button> 
-      </main> 
-      
-      
-</body>
+  </head>
+  <body dir="rtl">
+ 
+  </body>
 </html>

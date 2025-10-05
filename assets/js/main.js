@@ -119,3 +119,51 @@ $(".slider").each(function () {
     },
   });
 });
+
+$(document).ready(function() {
+    // Create TOC container
+    var toc = $('<ul></ul>');
+
+    // Find all headings inside .text-area
+    $('.text-area :header').each(function(index) {
+        var heading = $(this);
+        var tag = heading.prop('tagName').toLowerCase(); // e.g., h1, h2, etc.
+        var text = heading.text();
+        
+        // Generate ID if not present
+        var id = heading.attr('id');
+        if (!id) {
+            id = 'heading-' + index;
+            heading.attr('id', id);
+        }
+        
+        // Create list item with link
+        var li = $('<li></li>');
+        var a = $('<a></a>').attr('href', '#' + id).text(text);
+        li.append(a);
+        
+        // Add class based on heading level
+        if (tag === 'h2') {
+            li.addClass('large');
+        } else {
+            li.addClass('small');
+        }
+        
+        // Append to TOC (simple flat list, no nesting for simplicity)
+        toc.append(li);
+    });
+
+    // Append TOC to the container
+    $('#toc').append(toc);
+
+    // Add smooth scrolling to TOC links
+    $('#toc a').on('click', function(event) {
+        event.preventDefault(); // Prevent default anchor behavior
+        var target = $(this.hash); // Get the target element
+        if (target.length) {
+            $('html, body').animate({
+                scrollTop: target.offset().top
+            }, 800); // 800ms duration for smooth scroll
+        }
+    });
+});
