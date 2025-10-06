@@ -310,16 +310,10 @@ iframe {
   max-width: 100%;
 }
 
-table {
-  text-align: center;
-  border-spacing: 0 6px;
-  border-collapse: separate;
-  width: 100%;
-  margin: 30px 0;
-}
 
 table {
   text-align: center;
+  color: var(--normal-purple-color);
   border-spacing: 0 6px;
   border-collapse: separate !important;
   width: 100% !important;
@@ -1290,7 +1284,7 @@ header .header-main-content .main-border-hover-btn {
   font-size: 22px;
   transform: rotate(90deg);
   transform-origin: top left;
-  font-weight: 100;
+  font-weight: 600;
 }
 .about-ajdari-home-page-section
   .main-text-wrapper
@@ -1359,6 +1353,9 @@ header .header-main-content .main-border-hover-btn {
 }
 .service-category-section .item .slider {
   height: 60px;
+}
+.service-category-section .item .swiper-slide {
+  padding: 10px 40px;
 }
 .service-category-section .item .slider a {
   width: 100%;
@@ -2130,6 +2127,9 @@ form .btn {
 .text-area .item-type {
   padding: 20px 0;
 }
+.text-area .item-type .image-field{
+ height: auto;
+}
 .text-area .item-type:nth-child(odd) {
   background-color: var(
     --secondery-background-color
@@ -2153,11 +2153,12 @@ form .btn {
 }
 .secondery-banner-section .main-wrapper .title {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 800;
 }
 .secondery-banner-section .main-wrapper .number-field {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 800;
+  direction: ltr;
 }
 .secondery-banner-section .main-wrapper .icon {
   width: 75px;
@@ -2600,7 +2601,7 @@ form .btn {
   font-weight: 400;
   width: max-content;
 }
-.image-text-field-shadow-purple::before {
+.about-us-video-section  .image-text-field-shadow-purple::before {
   width: 8px;
   height: 40px;
   bottom: 23px;
@@ -3100,3 +3101,5 @@ form .btn {
   }
 }
 /* end responsive  */
+
+
