@@ -1,30 +1,12 @@
-/* Optimized CSS: Consolidated redundant rules, improved specificity, and maintained original styling */
-
 @font-face {
-  font-family: "peyda-medium";
-  src: url("../fonts/PeydaWeb-Medium.woff2") format("woff2");
-  font-weight: 500;
+  font-family: 'PeydaWebVF';
+  src: url('../fonts/PeydaWebVF.woff2') format('woff2-variations'),
+       url('../fonts/PeydaWebVF.woff') format('woff-variations');
+  font-weight: 100 950;
   font-style: normal;
-}
-@font-face {
-  font-family: "peyda-extrabold";
-  src: url("../fonts/PeydaWeb-ExtraBold.woff2") format("woff2");
-  font-weight: 800;
-  font-style: normal;
+  font-display: swap;
 }
 
-@font-face {
-  font-family: "peyda-bold";
-  src: url("../fonts/PeydaWeb-Bold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "peyda-extralight";
-  src: url("../fonts/PeydaWeb-ExtraLight.woff2") format("woff2");
-  font-weight: 200;
-  font-style: normal;
-}
 @font-face {
   font-family: "Anton";
   src: url("../fonts/Anton-Regular.ttf") format("woff");
@@ -129,8 +111,9 @@ html {
 body {
   overflow-x: hidden;
   overflow-wrap: break-word;
-  font: 14px/1.5 "peyda-medium";
+  font: 14px/1.5 "PeydaWebVF";
   color: #222;
+  font-weight: 400;
 }
 
 article,
@@ -166,7 +149,7 @@ h4,
 h5,
 h6 {
   line-height: 1.4;
-  font-family: peyda-bold;
+  font-weight: 700;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
@@ -232,7 +215,7 @@ small {
 
 strong,
 big {
-  font-family: peyda-bold;
+  font-weight: 600;
 }
 em {
   font-style: italic;
@@ -470,7 +453,7 @@ dt {
   clear: left;
   width: 150px;
   text-align: right;
-  font-family: peyda-bold;
+  font-weight: 600;
 }
 dt:after {
   content: ":";
@@ -1248,7 +1231,7 @@ header .header-main-content .main-border-hover-btn {
   .title {
   font-size: 20px;
   margin-bottom: 2px;
-  font-family: "peyda-bold";
+  font-weight: 600;
 }
 
 .about-ajdari-home-page-section {
@@ -1278,7 +1261,7 @@ header .header-main-content .main-border-hover-btn {
 }
 .about-ajdari-home-page-section .main-text-wrapper .title {
   font-size: 20px;
-  font-family: peyda-bold;
+  font-weight: 600;
 }
 .about-ajdari-home-page-section .main-text-wrapper .content {
   margin-top: 10px;
@@ -1306,7 +1289,7 @@ header .header-main-content .main-border-hover-btn {
   font-size: 22px;
   transform: rotate(90deg);
   transform-origin: top left;
-  font-family: peyda-medium;
+  font-weight: 100;
 }
 .about-ajdari-home-page-section
   .main-text-wrapper
@@ -1324,7 +1307,7 @@ header .header-main-content .main-border-hover-btn {
 }
 .about-ajdari-home-page-section .main-text-wrapper .project-wrapper .item {
   font-size: 16px;
-  font-family: peyda-bold;
+  font-weight: 600;
 }
 .about-ajdari-home-page-section .main-text-wrapper .project-wrapper .item p {
   padding: 10px 0;
@@ -1347,7 +1330,7 @@ header .header-main-content .main-border-hover-btn {
   box-shadow: var(--box-shadow-secondery-background);
 }
 .service-category-section .item .item-title {
-  font-family: peyda-bold;
+  font-weight: 600;
   font-size: 16px;
   margin-bottom: 10px;
 }
@@ -1371,7 +1354,7 @@ header .header-main-content .main-border-hover-btn {
 }
 .header-main-title-wrapper {
   margin-bottom: 35px;
-  font-family: peyda-bold;
+  font-weight: 600;
 }
 .service-category-section .item .slider {
   height: 60px;
@@ -1403,7 +1386,7 @@ header .header-main-content .main-border-hover-btn {
 }
 .contact-us-home-page-section .main-content .text-wrapper .title {
   font-size: 19px;
-  font-family: peyda-bold;
+  font-weight: 600;
 }
 .contact-us-home-page-section .main-content .img-wrapper {
   width: 40%;
@@ -1438,7 +1421,7 @@ header .header-main-content .main-border-hover-btn {
 }
 .contact-us-home-page-section .main-content .text-wrapper .phone-section {
   margin-top: 15px;
-  font-family: peyda-bold;
+  font-weight: 600;
 }
 .contact-us-home-page-section .main-content .text-wrapper .number-field {
   width: 70%;
@@ -1542,7 +1525,7 @@ header .header-main-content .main-border-hover-btn {
   .single-last-blog
   .text-field
   .title-text {
-  font-family: peyda-bold;
+  font-weight: 600;
   margin-bottom: 5px;
   font-size: 18px;
 }
@@ -1641,7 +1624,7 @@ header .header-main-content .main-border-hover-btn {
   background-color: var(--secondery-normal-orange-color);
 }
 .last-blogs-page-section .main-content .three-last-blog .item .title-text {
-  font-family: peyda-bold;
+  font-weight: 600;
   font-size: 16px;
 }
 .last-blogs-page-section .three-last-blog .about-this-blog {
@@ -1775,7 +1758,7 @@ header .header-main-content .main-border-hover-btn {
   color: var(--text-white-color);
   font-size: 18px;
   margin-bottom: 5px;
-  font-family: peyda-bold;
+  font-weight: 600;
 }
 .main-footer .main-footer-wrapper .about-us-wrapper {
   margin-top: 25px;
@@ -1883,7 +1866,7 @@ header .header-main-content .main-border-hover-btn {
 
 .main-image-gallery-section .title {
   font-size: 18px;
-  font-family: peyda-bold;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 .main-image-gallery-section.has-shadow-side
@@ -1898,7 +1881,7 @@ header .header-main-content .main-border-hover-btn {
   .swiper::after {
   right: -10px;
   width: 10px;
-  height: 100px;
+  height: 100%;
   position: absolute;
   content: "";
   background-color: var(--background-color);
@@ -1912,7 +1895,7 @@ header .header-main-content .main-border-hover-btn {
   .swiper::before {
   left: -10px;
   width: 10px;
-  height: 100px;
+  height: 100%;
   position: absolute;
   content: "";
   background-color: var(--background-color);
@@ -2013,7 +1996,7 @@ header .header-main-content .main-border-hover-btn {
 
 .content-tables-section .main-tables .title {
   font-size: 16px;
-  font-family: peyda-bold;
+  font-weight: 600;
   margin-bottom: 12px;
   padding-bottom: 10px;
   border-bottom: 2px dashed var(--text-color);
@@ -2023,7 +2006,7 @@ header .header-main-content .main-border-hover-btn {
   direction: rtl;
 }
 .content-tables-section .main-tables .large {
-  font-family: peyda-bold;
+  font-weight: 600;
 }
 .content-tables-section .main-tables .small {
   padding-right: 10px;
@@ -2035,7 +2018,7 @@ header .header-main-content .main-border-hover-btn {
   padding: 35px 25px;
 }
 .visit-form-section .visit-form-container .title {
-  font-family: peyda-bold;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 .visit-form-section .visit-form-container .input,
@@ -2117,14 +2100,14 @@ form .btn {
   left: 50%;
   transform: translateX(-50%);
   color: var(--text-white-color);
-  font-family: peyda-bold;
+  font-weight: 600;
   z-index: 10;
 }
 .text-area .features {
   margin-top: 20px;
 }
 .text-area .features .feature-title {
-  font-family: peyda-bold;
+  font-weight: 600;
   font-size: 14px;
 }
 .text-area .features li {
@@ -2169,11 +2152,11 @@ form .btn {
 }
 .secondery-banner-section .main-wrapper .title {
   font-size: 18px;
-  font-family: peyda-bold;
+  font-weight: 600;
 }
 .secondery-banner-section .main-wrapper .number-field {
   font-size: 16px;
-  font-family: peyda-bold;
+  font-weight: 600;
 }
 .secondery-banner-section .main-wrapper .icon {
   width: 75px;
@@ -2195,7 +2178,7 @@ form .btn {
 }
 .secondery-banner-section .social-wrapper .orange-color {
   color: var(--secondery-normal-orange-color);
-  font-family: peyda-bold;
+  font-weight: 600;
   font-size: 18px;
 }
 .secondery-banner-section .social-wrapper .icon {
@@ -2215,7 +2198,7 @@ form .btn {
 }
 .accordion-faq-section .title {
   font-size: 18px;
-  font-family: peyda-bold;
+  font-weight: 600;
 }
 .accordion-faq-section .accordion {
   margin-top: 20px;
@@ -2266,7 +2249,7 @@ form .btn {
   border-bottom-right-radius: 0;
   border: unset;
   padding-bottom: 0;
-  font-family: peyda-bold;
+  font-weight: 600;
 }
 
 .accordion-faq-section
@@ -2287,7 +2270,7 @@ form .btn {
 }
 
 .accordion-faq-section .accordion .tab-content p {
-  padding: 0 30px 8px 30px;
+  padding: 0 30px 12px 30px;
   background-color: var(--secondery-background-color);
   margin-top: 0px;
   border-bottom-left-radius: 10px;
@@ -2305,11 +2288,10 @@ form .btn {
   transform: translateY(0);
 }
 
-
-.comments-section .comments-container{
+.comments-section .comments-container {
   margin-top: 10px;
 }
-.comments-section .comments-container .border-dashed{
+.comments-section .comments-container .border-dashed {
   border-top: 2px dashed var(--secondery-border-color);
 }
 .comments-section .comments-container .comments-area {
@@ -2421,7 +2403,7 @@ form .btn {
 }
 .comments-section .comments-container .comment-author b.fn {
   width: 65%;
-  font-family: peyda-extrabold;
+  font-weight: 800;
 }
 .comments-section .comments-container .comment-author .says {
   margin-right: 5px;
@@ -2449,7 +2431,6 @@ form .btn {
 .comments-section .comments-container .comment-content {
   width: 76%;
   margin-right: 40px;
-  display: flex;
   align-items: center;
 }
 .comments-section .comments-container .commentlist .children li {
@@ -2465,10 +2446,20 @@ form .btn {
 .comments-section .comments-container .comment-list li ul {
   margin: 15px 15px 0 0;
 }
-.comments-section .comments-container .comment-list li ul.children .comment-reply-link {
+.comments-section
+  .comments-container
+  .comment-list
+  li
+  ul.children
+  .comment-reply-link {
   background-color: var(--secondery-background-color);
 }
-.comments-section .comments-container .comment-list li ul.children .comment-body {
+.comments-section
+  .comments-container
+  .comment-list
+  li
+  ul.children
+  .comment-body {
   background-color: var(--background-color);
 }
 /* start responsive  */
@@ -2476,8 +2467,33 @@ form .btn {
   header .nav-section {
     padding: 20px 0;
   }
+   .flex-wrap-large{
+    flex-wrap: wrap;
+   }
+   .margin-large-m-25 {
+    margin-bottom: 25px;
+   }
+   .w-l-100 {
+    width: 100% !important;
+   }
+   .secondery-banner-section {
+    height: auto;
+   }
+   .secondery-banner-section .main-wrapper , .secondery-banner-section .social-wrapper {
+    height: 125px;
+   }
+   .secondery-banner-section .social-wrapper  {
+    width: 49%;
+   }
 }
 @media (max-width: 990px) {
+  .flex-wrap-medium{
+    flex-wrap: wrap;
+   }
+   .visit-form-section .visit-form-container .input ,.visit-form-section .visit-form-container .btn {
+    width: 49%;
+    margin-bottom: 10px;
+   }
   header .nav-section nav .mobile-btn {
     display: block;
     font-size: 30px;
@@ -2625,9 +2641,62 @@ form .btn {
   .brand-logo-main-section .brand-logo-main-container {
     padding: 20px;
   }
+  .flex-column-medium {
+    flex-direction: column;
+  }
+  .margin-bott-m-50 {
+    margin-bottom: 50px;
+  }
+  .margin-bott-m-25 {
+    margin-bottom: 25px;
+  }
+  .content-tables-section {
+    height: auto;
+  }
+  .content-tables-section .main-tables {
+    height: 350px;
+  }
+  .text-area .main-image-wrapper {
+    flex-direction: column;
+  }
+  .text-area .image-field {
+    width: 100%;
+  }
+  .text-area .item {
+    flex-direction: column;
+  }
+  .text-area .text-wrapper {
+    width: 100%;
+  }
+  .comments-section .comments-container .comment-author time {
+    margin-top: -10px;
+  }
 }
 
 @media (max-width: 767px) {
+  .comments-section .comments-container .comment-author time {
+    margin-top: -20px;
+  }
+  .flex-column-small {
+    flex-direction: column;
+  }
+  .w-s-100 {
+    width: 100% !important;
+  }
+  .secondery-banner-section .main-wrapper {
+    height: 170px;
+    justify-content: space-around;
+    padding: 20px 50px;
+  }
+  .secondery-banner-section .main-wrapper .text-wrapper {
+    text-align: center;
+  }
+  .margin-bott-s-50 {
+    margin-bottom: 50px;
+  }
+  .margin-bott-s-25 {
+    margin-bottom: 25px;
+  }
   .brand-logo-main-section .text-wrapper {
     align-items: center;
   }
@@ -2674,9 +2743,89 @@ form .btn {
     font-size: 160px;
     text-align: center;
   }
+  .text-area .full-image-field-screen img,
+  .comments-section .comments-container .comment-meta,
+  .comments-section .comments-container .comment-content,
+  .comments-section .comments-container .comment-form .comment-form-comment,
+  .comments-section .comments-container .comment-form .form-submit {
+    width: 100%;
+  }
+  .comments-section .comments-container .comment-form .form-submit input {
+    margin-bottom: 10px;
+  }
+  .comments-section .comments-container .comment-meta {
+    height: 100px;
+    margin-bottom: 30px;
+  }
+  .comments-section .comments-container .comment-author b.fn {
+    width: 60%;
+  }
+  .comments-section .comments-container .comment-reply-link {
+    width: 150px;
+  }
+  .comments-section .comments-container .comment-author time {
+    margin-right: 60px; 
+    width: 30%;
+  }
+  .comments-section .comments-container .comment-author .avatar {
+    height: 50px;
+    width: 50px;
+  }
+  .comments-section .comments-container .comment-form,
+  .comments-section .comments-container .comment-body {
+    flex-direction: column;
+  }
+  .text-area .features ul {
+    flex-direction: column;
+  }
+  .webdesing-price-section .price-container {
+    overflow-x: auto;
+  }
+  table {
+    display: flex
+;
+    flex-direction: column;
+    overflow-x: scroll;
+  }
+  /* برای مرورگرهای مبتنی بر Webkit (کروم، سافاری، اج جدید) */
+  table::-webkit-scrollbar {
+  height:  6px;
+  background: var(--secondery-background-color); /* بکگراند آبی */
+  border-radius: 6px;
+  }
+
+  table::-webkit-scrollbar-thumb {
+  background: var(--secondery-thumb-color); /* نوار اسکرول سیاه */
+  border-radius: 6px;
+  height: 6px;
+  }
+  tbody {
+    overflow-x: auto;
+    width: 900px;
+  }
+  tr {
+    width: 100px !important;
+    max-width: 100px !important;
+    width: 840px;
+  }
+  table tr:first-child td {
+    width: 150px !important;
+  }
+  .text-area .container {
+    overflow: hidden;
+  }
+  .comments-section .comments-container .comment-content {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 500px) {
+  .secondery-banner-section .main-wrapper {
+    height: 225px; 
+  }
+  .visit-form-section .visit-form-container .input ,.visit-form-section .visit-form-container .btn {
+    width: 100%;
+   }
   header .header-main-content .back-title {
     font-size: 120px;
   }
