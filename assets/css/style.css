@@ -2513,7 +2513,7 @@ form .btn {
 }
 .about-us-main-content .right-side .swiper-field .swiper-button-next,
 .about-us-main-content .right-side .swiper-field .swiper-button-prev {
-  background-color: var(--background-color);
+   background-color: var(--background-color-transparent);
   height: 30px;
   transform: translateY(20%);
   border-radius: 5px;
@@ -2533,7 +2533,7 @@ form .btn {
 
 .about-us-video-section .swiper-button-next,
 .about-us-video-section .swiper-rtl .swiper-button-prev {
-  top: 30px;
+  top: 48px;
   height: 30px;
   width: 30px;
   background-color: var(--background-color-transparent);
@@ -2541,7 +2541,8 @@ form .btn {
   transition: all 0.3s ease;
 }
 .about-us-video-section .swiper-button-next:hover,
-.about-us-video-section .swiper-rtl .swiper-button-prev:hover {
+.about-us-video-section .swiper-rtl .swiper-button-prev:hover ,.about-us-main-content .right-side .swiper-field .swiper-button-next:hover,
+.about-us-main-content .right-side .swiper-field .swiper-button-prev:hover{
   background-color: var(--background-color);
 }
 .about-us-video-section .swiper-button-prev {
@@ -2557,7 +2558,7 @@ form .btn {
 .about-us-video-section .info-wrapper .item {
   height: 21%;
   background-color: var(--secondery-background-color);
-  border-radius: 20px;
+  border-radius: 13px;
 }
 .about-us-video-section .info-wrapper .item.download-link {
   background-color: var(--secondery-light-purple-color);
@@ -2616,7 +2617,7 @@ form .btn {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 13px;
 }
 /* start responsive  */
 @media (max-width: 1180px) {
