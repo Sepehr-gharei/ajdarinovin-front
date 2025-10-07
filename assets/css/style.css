@@ -2621,6 +2621,7 @@ form .btn {
   border-radius: 13px;
 }
 /* end about  */
+/* start contact  */
 .contact-information-section ,.contact-form-section{
   margin: 50px 0;
 }
@@ -2691,6 +2692,101 @@ form .btn {
 }
 .contact-form-section .map-location iframe{
   border-radius: 10px;
+}
+/* end responsive  */
+.portfolio-item-section {
+  margin: 50px 0;
+}
+.portfolio-item-section .item {
+    width: 49%;
+    margin-bottom: 30px;
+    position: relative;
+}
+.portfolio-item-section .item .link-redirect {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.portfolio-item-section .item .text-field {
+  width: 80%;
+  border: 1px solid var(--border-normal-black-color);
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 35%;
+  transition: all 0.3s ease;
+}
+.portfolio-item-section .item .swiper {
+ position: absolute;
+ right: 0;
+ top: 50%;
+ transform: translateY(-50%);
+ width: 53%;
+ height: 85%;
+ z-index: 2;
+ border-radius: 10px;
+}
+
+.portfolio-item-section .item:hover .text-field  {
+  background-color: var(--normal-purple-color);
+  color: var(--text-white-color);
+}
+.portfolio-item-section .item:hover .text-field  .title {
+  color: var(--secondery-normal-orange-color);
+}
+.portfolio-item-section .item .swiper .image-field img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+.portfolio-item-section .item .swiper  .swiper-slide  {
+  padding: 0;
+}
+.portfolio-item-section .swiper-button-prev, .portfolio-item-section .swiper-button-next {
+  position: absolute;
+  background: var(--background-color-transparent);
+    z-index: 10;
+    height: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+
+}
+.portfolio-item-section .swiper-button-prev:hover, .portfolio-item-section .swiper-button-next:hover {
+  background: var(--background-color);
+
+}
+.portfolio-item-section .item .swiper    .swiper-button-next {
+  left: 15px !important;
+  right:  unset !important;
+}
+.portfolio-item-section .item .swiper    .swiper-button-prev  {
+  right: 15px !important;
+  left: unset !important;
+}
+.portfolio-item-section .item .text-field .title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.navigation.pagination{
+  margin: 50px 0 ;
+  margin-bottom: 100px;
+}
+.navigation.pagination a  ,.navigation.pagination span{
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 0 3px;
+}
+.navigation.pagination span{
+  background-color: var(--secondery-background-color);
 }
 /* start responsive  */
 @media (max-width: 1180px) {
