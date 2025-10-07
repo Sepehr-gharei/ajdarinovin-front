@@ -2465,6 +2465,7 @@ form .btn {
   background-color: var(--background-color);
 }
 /* end page  */
+/* start about */
 .about-us-main-content {
   margin: 85px 0;
   position: relative;
@@ -2619,8 +2620,92 @@ form .btn {
   object-fit: cover;
   border-radius: 13px;
 }
+/* end about  */
+.contact-information-section ,.contact-form-section{
+  margin: 50px 0;
+}
+.contact-information-section .item {
+ padding: 30px ;
+ background-color: var(--secondery-background-color);
+ border-radius: 10px;
+ margin-bottom: 20px;
+}
+.contact-information-section .item.location {
+  width: 72%;
+}
+.contact-information-section .item.email {
+  width: 23%;
+}
+.contact-information-section .item.socials {
+  width: 27%;
+}
+.contact-information-section .item.telephox {
+  width: 19%;
+}
+.contact-information-section .item.phone {
+ width: 56%;
+}
+.contact-information-section .item.phone .text {
+  direction: ltr;
+
+}
+
+.contact-information-section .item .title{
+  font-size: 18px;
+  color: var(--normal-purple-color);
+  font-weight: 700;
+}
+.contact-information-section .item span{
+   margin: 0 0px;
+}
+.contact-information-section .item .icon {
+  height: 50px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--background-color);
+  margin-left: 10px;
+}
+.contact-form-section form ,.contact-form-section .map-location {
+  width: 48%;
+}
+.contact-form-section form .input {
+   width: 48%;
+   border-radius: 10px;
+   padding: 10px 20px;
+   color: var(--text-medium-color);
+   border: 1px solid var(--border-normal-black-color);
+   margin-bottom: 10px;
+}
+.contact-form-section form .btn {
+  max-width: max-content;
+}
+.contact-form-section form .input::placeholder{
+  color: var(--text-medium-color);
+}
+.contact-form-section form textarea {
+  width: 100%;
+  height: 200px;
+  max-width: 100%;
+  min-width: 100%;
+}
+.contact-form-section .map-location iframe{
+  border-radius: 10px;
+}
 /* start responsive  */
 @media (max-width: 1180px) {
+  .contact-information-section .item span{
+    margin: 0 5px;
+ }
+  .contact-information-section .item.email {
+    width: 32%;
+  }
+  .contact-information-section .item.socials {
+    width: 32%;
+  }
+  .contact-information-section .item.telephox {
+    width: 32%;
+  }
   header .nav-section {
     padding: 20px 0;
   }
@@ -2645,6 +2730,9 @@ form .btn {
   }
 }
 @media (max-width: 990px) {
+.contact-form-section form ,.contact-form-section .map-location {
+ height: 300px;
+}
   .flex-wrap-medium {
     flex-wrap: wrap;
   }
@@ -2999,6 +3087,13 @@ form .btn {
 }
 
 @media (max-width: 500px) {
+  .contact-information-section .item.phone .text {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-information-section .item.phone .text span{
+    display: none;
+  }
   .about-us-video-section .slider-wrapper {
     order: 3;
   }
