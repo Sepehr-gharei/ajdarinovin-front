@@ -1,49 +1,51 @@
 $(document).ready(function () {
-    // باز کردن منو
-    $(".mobile-btn .open").click(function () {
-      $("header .nav-section .menu-container").css("right", "0");
-      $(this).css("display", "none");
-  
-      // دکمه close بیاد داخل
-      $(".mobile-btn .close").addClass("active");
-  
-      $(".overlay").fadeIn(200); // نمایش overlay
-    });
-  
-    // بستن منو با دکمه بستن
-    $(".mobile-btn .close").click(function () {
-      closeMenu();
-    });
-  
-    // بستن منو با کلیک روی overlay
-    $(".overlay").click(function () {
-      closeMenu();
-    });
-  
-    // بستن منو با کلیک بیرون از منو
-    $(document).on("click", function (e) {
-      if ($(".overlay").is(":visible")) {
-        if (
-          $(e.target).closest("header .nav-section .menu-container").length === 0 &&
-          !$(e.target).hasClass("open")
-        ) {
-          closeMenu();
-        }
+  // باز کردن منو
+  $(".mobile-btn .open").click(function () {
+    $("header .nav-section .menu-container").css("right", "0");
+    $(this).css("display", "none");
+
+    // دکمه close بیاد داخل
+    $(".mobile-btn .close").addClass("active");
+
+    $(".overlay").fadeIn(200); // نمایش overlay
+  });
+
+  // بستن منو با دکمه بستن
+  $(".mobile-btn .close").click(function () {
+    closeMenu();
+  });
+
+  // بستن منو با کلیک روی overlay
+  $(".overlay").click(function () {
+    closeMenu();
+  });
+
+  // بستن منو با کلیک بیرون از منو
+  $(document).on("click", function (e) {
+    if ($(".overlay").is(":visible")) {
+      if (
+        $(e.target).closest("header .nav-section .menu-container").length ===
+          0 &&
+        !$(e.target).hasClass("open")
+      ) {
+        closeMenu();
       }
-    });
-  
-    // تابع برای بستن منو
-    function closeMenu() {
-      $("header .nav-section .menu-container").css("right", "-1000px");
-      $(".mobile-btn .open").css("display", "block");
-  
-      // دکمه close برگرده عقب
-      $(".mobile-btn .close").removeClass("active");
-  
-      $(".overlay").fadeOut(200); // مخفی کردن overlay
     }
   });
-  
+
+  // تابع برای بستن منو
+  function closeMenu() {
+    $("header .nav-section .menu-container").css("right", "-1000px");
+    $(".mobile-btn .open").css("display", "block");
+
+    // دکمه close برگرده عقب
+    $(".mobile-btn .close").removeClass("active");
+
+    $(".overlay").fadeOut(200); // مخفی کردن overlay
+  }
+});
+
+
 window.onscroll = function () {
   const nav = document.querySelector(".nav-section");
   if (window.scrollY > 150) {
@@ -120,50 +122,77 @@ $(".slider").each(function () {
   });
 });
 
+$(document).ready(function () {
+  // Create TOC container
+  var toc = $("<ul></ul>");
+
+  // Find all headings inside .text-area
+  $(".text-area :header").each(function (index) {
+    var heading = $(this);
+    var tag = heading.prop("tagName").toLowerCase(); // e.g., h1, h2, etc.
+    var text = heading.text();
+
+    // Generate ID if not present
+    var id = heading.attr("id");
+    if (!id) {
+      id = "heading-" + index;
+      heading.attr("id", id);
+    }
+
+    // Create list item with link
+    var li = $("<li></li>");
+    var a = $("<a></a>")
+      .attr("href", "#" + id)
+      .text(text);
+    li.append(a);
+
+    // Add class based on heading level
+    if (tag === "h2") {
+      li.addClass("large");
+    } else {
+      li.addClass("small");
+    }
+
+    // Append to TOC (simple flat list, no nesting for simplicity)
+    toc.append(li);
+  });
+
+  // Append TOC to the container
+  $("#toc").append(toc);
+
+  // Add smooth scrolling to TOC links
+  $("#toc a").on("click", function (event) {
+    event.preventDefault(); // Prevent default anchor behavior
+    var target = $(this.hash); // Get the target element
+    if (target.length) {
+      $("html, body").animate(
+        {
+          scrollTop: target.offset().top,
+        },
+        800
+      ); // 800ms duration for smooth scroll
+    }
+  });
+  if ($(window).width() < 990) {
+    $(".menu-item-has-children").on("click", function (e) {
+      // جلوگیری از رفتار پیش‌فرض
+      e.preventDefault();
+
+      // اضافه کردن کلاس open-child به خود منوی والد
+      $(this).toggleClass("open-child");
+    });
+  }
+});
+Fancybox.bind('[data-fancybox="gallery"]', {
+  // Optional settings
+});
+
+// jQuery for mobile menu toggle (under 990px)
 $(document).ready(function() {
-    // Create TOC container
-    var toc = $('<ul></ul>');
-
-    // Find all headings inside .text-area
-    $('.text-area :header').each(function(index) {
-        var heading = $(this);
-        var tag = heading.prop('tagName').toLowerCase(); // e.g., h1, h2, etc.
-        var text = heading.text();
-        
-        // Generate ID if not present
-        var id = heading.attr('id');
-        if (!id) {
-            id = 'heading-' + index;
-            heading.attr('id', id);
-        }
-        
-        // Create list item with link
-        var li = $('<li></li>');
-        var a = $('<a></a>').attr('href', '#' + id).text(text);
-        li.append(a);
-        
-        // Add class based on heading level
-        if (tag === 'h2') {
-            li.addClass('large');
-        } else {
-            li.addClass('small');
-        }
-        
-        // Append to TOC (simple flat list, no nesting for simplicity)
-        toc.append(li);
+  if ($(window).width() < 990) {
+    $('.menu-item-has-children > a').on('click', function(e) {
+      e.preventDefault();
+      $(this).next('.sub-menu').slideToggle();
     });
-
-    // Append TOC to the container
-    $('#toc').append(toc);
-
-    // Add smooth scrolling to TOC links
-    $('#toc a').on('click', function(event) {
-        event.preventDefault(); // Prevent default anchor behavior
-        var target = $(this.hash); // Get the target element
-        if (target.length) {
-            $('html, body').animate({
-                scrollTop: target.offset().top
-            }, 800); // 800ms duration for smooth scroll
-        }
-    });
+  }
 });
