@@ -18,7 +18,8 @@ jQuery(document).ready(function ($) {
   $(document).on("click", function (e) {
     if ($(".overlay").is(":visible")) {
       if (
-        $(e.target).closest("header .nav-section .menu-container").length === 0 &&
+        $(e.target).closest("header .nav-section .menu-container").length ===
+          0 &&
         !$(e.target).hasClass("open")
       ) {
         closeMenu();
@@ -33,7 +34,7 @@ jQuery(document).ready(function ($) {
     $(".overlay").fadeOut(200);
   }
 
-  // Sticky header on scroll
+  // Sticky header
   window.onscroll = function () {
     const nav = document.querySelector(".nav-section");
     if (window.scrollY > 150) {
@@ -42,6 +43,33 @@ jQuery(document).ready(function ($) {
       nav.classList.remove("sticky-header");
     }
   };
+
+  // Border hover button
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".main-border-hover-btn").forEach((btn) => {
+      const svg = btn.querySelector("svg");
+      const path = svg.querySelector("path.border-path");
+      if (!path) return;
+      const width = btn.offsetWidth;
+      const height = btn.offsetHeight;
+      const r = 10.5;
+      const inset = 1.5;
+      svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+      const d = `M${r + inset},${inset} H${
+        width - r - inset
+      } A${r},${r} 0 0 1 ${width - inset},${r + inset} V${
+        height - r - inset
+      } A${r},${r} 0 0 1 ${width - r - inset},${height - inset} H${
+        r + inset
+      } A${r},${r} 0 0 1 ${inset},${height - r - inset} V${
+        r + inset
+      } A${r},${r} 0 0 1 ${r + inset},${inset}`;
+      path.setAttribute("d", d);
+      const length = path.getTotalLength();
+      path.setAttribute("stroke-dasharray", length);
+      path.setAttribute("stroke-dashoffset", length);
+    });
+  });
 
   // Slider initialization
   $(".slider").each(function () {
@@ -73,42 +101,8 @@ jQuery(document).ready(function ($) {
         768: { slidesPerView: items.columns_tablet },
         1024: { slidesPerView: items.columns },
       },
-      // Add callback to run border animation after slider initialization
-      on: {
-        init: function () {
-          initializeBorderAnimation();
-        },
-        resize: function () {
-          initializeBorderAnimation(); // Re-run on resize to handle responsive changes
-        },
-      },
     });
   });
-
-  // Border animation function
-  function initializeBorderAnimation() {
-    document.querySelectorAll(".main-border-hover-btn").forEach((btn) => {
-      const svg = btn.querySelector("svg");
-      const path = svg.querySelector("path.border-path");
-      if (!path) return;
-      const width = btn.offsetWidth;
-      const height = btn.offsetHeight;
-      const r = 10.5;
-      const inset = 1.5;
-      svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
-      const d = `M${r + inset},${inset} H${width - r - inset} A${r},${r} 0 0 1 ${
-        width - inset
-      },${r + inset} V${height - r - inset} A${r},${r} 0 0 1 ${
-        width - r - inset
-      },${height - inset} H${r + inset} A${r},${r} 0 0 1 ${inset},${
-        height - r - inset
-      } V${r + inset} A${r},${r} 0 0 1 ${r + inset},${inset}`;
-      path.setAttribute("d", d);
-      const length = path.getTotalLength();
-      path.setAttribute("stroke-dasharray", length);
-      path.setAttribute("stroke-dashoffset", length);
-    });
-  }
 
   // Table of Contents
   var toc = $("<ul></ul>");
@@ -134,7 +128,6 @@ jQuery(document).ready(function ($) {
     toc.append(li);
   });
   $("#toc").append(toc);
-
   $("#toc a").on("click", function (event) {
     event.preventDefault();
     var target = $(this.hash);
@@ -143,7 +136,6 @@ jQuery(document).ready(function ($) {
     }
   });
 
-  // Mobile menu children toggle
   if ($(window).width() < 990) {
     $(".menu-item-has-children").on("click", function (e) {
       e.preventDefault();
@@ -151,10 +143,10 @@ jQuery(document).ready(function ($) {
     });
   }
 
-  // Fancybox initialization
+  // Fancybox
   Fancybox.bind('[data-fancybox="gallery"]', {});
 
-  // Mobile submenu toggle
+  // Mobile sub-menu
   if ($(window).width() < 990) {
     $(".menu-item-has-children > a").on("click", function (e) {
       e.preventDefault();
